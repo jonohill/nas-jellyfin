@@ -1,2 +1,4 @@
 jellyfin: /jellyfin/jellyfin
-tailscale: tailscale serve 8096 --yes
+tailscaled: tailscaled --tun=userspace-networking --statedir /config/tailscale
+tailscale: /tailscale.sh 
+rclone: /rclone.sh
