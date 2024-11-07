@@ -1,0 +1,11 @@
+https://id.jottacloud.com, https://jfs.jottacloud.com {
+	log error
+
+	tls internal
+
+	reverse_proxy {$PROXY_TARGET} {
+		header_up x-secret {$PROXY_SECRET}
+		header_up x-target-host {host}
+		header_up host {upstream_hostport}
+	}
+}
