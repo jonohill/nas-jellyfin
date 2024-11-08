@@ -1,4 +1,4 @@
-tailscaled: tailscaled --tun=userspace-networking --statedir /config/tailscale
+tailscaled: tailscaled --tun=userspace-networking --outbound-http-proxy-listen=localhost:1055 --statedir /config/tailscale
 tailscale: /tailscale.sh 
 caddy: caddy run --config /etc/caddy/Caddyfile
 rclone: /await.sh caddy && /rclone.sh

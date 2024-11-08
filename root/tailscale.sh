@@ -2,7 +2,7 @@
 
 # try a few times
 for i in {1..5}; do
-    if tailscale up --authkey "$TS_AUTHKEY" --hostname "$TS_HOSTNAME"; then
+    if tailscale up --authkey "$TS_AUTHKEY" --hostname "$TS_HOSTNAME" --exit-node "$TS_EXITNODE"; then
         break
     fi
     
