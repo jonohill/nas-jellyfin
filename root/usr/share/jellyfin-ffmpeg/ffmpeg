@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-http_proxy=http://localhost:1055 exec ffmpeg-real "$@"

@@ -28,5 +28,6 @@ RUN apt-get update && apt-get install -y \
 RUN cp /usr/share/jellyfin-ffmpeg/ffmpeg /usr/share/jellyfin-ffmpeg/ffmpeg-real && \
     cp /usr/share/jellyfin-ffmpeg/ffprobe /usr/share/jellyfin-ffmpeg/ffprobe-real
 COPY ./root /
+COPY jellyfin-ffmpeg/* /usr/share/jellyfin-ffmpeg/
 
 ENTRYPOINT [ "/init.sh" ]
