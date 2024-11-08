@@ -1,5 +1,5 @@
 tailscaled: tailscaled --tun=userspace-networking --statedir /config/tailscale
 tailscale: /tailscale.sh 
-caddy: caddy run -c /etc/caddy/Caddyfile
+caddy: caddy run --config /etc/caddy/Caddyfile
 rclone: /await.sh caddy && /rclone.sh
 jellyfin: /await.sh rclone && /jellyfin/jellyfin
