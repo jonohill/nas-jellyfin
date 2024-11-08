@@ -12,7 +12,7 @@ for arg in "$@"; do
     fi
 
     if [ "$1" = "rclone" ]; then
-        while [ ! "$(ls -A "$RCLONE_MOUNT_DIR")" ]; do
+        while [ ! "$(ls -A /media/rclone)" ]; do
             echo "Waiting for rclone mount..."
             sleep 1
         done
