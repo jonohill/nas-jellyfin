@@ -26,6 +26,7 @@ COPY --from=download /tmp/tailscale-archive-keyring.gpg /usr/share/keyrings/tail
 COPY --from=download /tmp/tailscale.list /etc/apt/sources.list.d/tailscale.list
 
 RUN apt-get update && apt-get install -y \
+        caddy \
         fuse3 \
         libnss3-tools \
         rclone \
