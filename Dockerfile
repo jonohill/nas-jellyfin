@@ -12,7 +12,7 @@ RUN curl -fsSL https://pkgs.tailscale.com/stable/debian/bookworm.tailscale-keyri
 FROM ghcr.io/jellyfin/jellyfin:10.10.3 
 
 COPY --from=ghcr.io/jonohill/docker-overmind:2.5.1 /usr/local/bin/overmind /usr/local/bin/overmind
-COPY --from=caddy:2.8.4 /usr/bin/caddy /usr/bin/caddy
+COPY --from=caddy:2.9.1 /usr/bin/caddy /usr/bin/caddy
 
 COPY --from=download /tmp/tailscale-archive-keyring.gpg /usr/share/keyrings/tailscale-archive-keyring.gpg
 COPY --from=download /tmp/tailscale.list /etc/apt/sources.list.d/tailscale.list
