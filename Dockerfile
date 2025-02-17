@@ -9,7 +9,7 @@ RUN curl -fsSL https://pkgs.tailscale.com/stable/debian/bookworm.noarmor.gpg >ta
 RUN curl -fsSL https://pkgs.tailscale.com/stable/debian/bookworm.tailscale-keyring.list >tailscale.list
 
 
-FROM ghcr.io/jellyfin/jellyfin:10.10.5 
+FROM ghcr.io/jellyfin/jellyfin:10.10.6 
 
 COPY --from=ghcr.io/jonohill/docker-overmind:2.5.1 /usr/local/bin/overmind /usr/local/bin/overmind
 COPY --from=caddy:2.9.1 /usr/bin/caddy /usr/bin/caddy
